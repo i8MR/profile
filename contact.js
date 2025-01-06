@@ -11,20 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const message = formData.get("message");
 
       // Webhook URL
-      const webhookURL = "https://discord.com/api/webhooks/1325846128251502693/ZcgEGkimuMTuENcoTPem7lVpxAbq8sCKzO0QmD-zOxWfUCzDY7l7yUhGcanitxYEj0UZ";
+      const webhookURL = "https://discord.com/api/webhooks/1325891164691234836/OaifzxBTyp7GQJ-0o-DINnoruOuRgi0f-XZCar9V3-l6aqQYHmnsPaeJ6A95PHFYIBRB";
 
       // Prepare payload for Discord Webhook
       const discordPayload = {
-          username: "Contact From Website",
-          avatar_url: "https://i.ibb.co/B2YFCvT/8faeb7f593a8a1c5a90086b8700390bc.jpg", // يمكنك إضافة صورة رمزية
+          username: "مركز التواصل الفني مع الأستاذ قمر",
+          avatar_url: "https://i.ibb.co/h7Hg5Ft/e06c86f5f4e62e8c81f2cb10a854660b.png", // يمكنك إضافة صورة رمزية
           embeds: [
               {
-                  title: "New Contact Form Submission",
+                  title: "رسالة جديدة من الموقع",
                   color: 3447003,
                   fields: [
-                      { name: "Name", value: name || "N/A", inline: true },
-                      { name: "Email", value: email || "N/A", inline: true },
-                      { name: "Message", value: message || "N/A", inline: false },
+                      { name: "الأسم", value: name || "N/A", inline: true },
+                      { name: "الأيميل", value: email || "N/A", inline: true },
+                      { name: "الرسالة", value: message || "N/A", inline: false },
                   ],
                   timestamp: new Date(),
               },
