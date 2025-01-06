@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Prepare payload for Discord Webhook
       const discordPayload = {
           username: "مركز التواصل الفني مع الأستاذ قمر",
+          content: "<@913720162362986517>",
           avatar_url: "https://i.ibb.co/h7Hg5Ft/e06c86f5f4e62e8c81f2cb10a854660b.png", // يمكنك إضافة صورة رمزية
           embeds: [
               {
