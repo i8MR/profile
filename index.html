@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8MR Web</title>
+    <link rel="icon" href="https://i.ibb.co/sWwhcjM/logo-1.png"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="background.js"></script>
+</head>
+<body>
+    <div id="waves">
+    <header class="header-card">
+        <nav>
+            <ul>
+                <li><a href="#about" class="scroll">About</a></li>
+                <li><a href="#contact" class="scroll">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <div class="profile-image">
+            </div>
+            <div class="profile-info">
+                <h1>8MR</h1>
+                <p>
+                    انسان حال سبيله ومايحب الضرر للناس .
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/e.6oc" target="_blank" rel="noopener noreferrer">
+                        <img class="icon-link" src="https://skillicons.dev/icons?i=instagram" alt="Instagram">
+                    </a>
+                    <a href="https://steamcommunity.com/profiles/76561199512745233/" target="_blank" rel="noopener noreferrer">
+                        <img class="icon-link" src="https://i.ibb.co/PDkbf92/steam.png" alt="Steam">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+                <div id="form-messages"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-separator"></div>
+        <p class="footer-copyright">&copy; All CopyRights Reversed To 8MR 2025-2999</p>
+        <!-- <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div> -->
+        <div class="footer-social">
+            <!-- Add your social media links here -->
+            <a href="https://www.instagram.com/e.6oc">
+                <img class="footer-social-link" src="https://skillicons.dev/icons?i=instagram">
+            </a>
+            <a href="https://steamcommunity.com/profiles/76561199512745233/">
+                <img class="footer-social-link" src="https://i.ibb.co/PDkbf92/steam.png">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Smooth scrolling script -->
+    <script>
+        function smoothScroll(target, duration) {
+            var targetElement = document.querySelector(target);
+            var targetPosition = targetElement.getBoundingClientRect().top;
+            var startPosition = window.pageYOffset;
+            var startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                var timeElapsed = currentTime - startTime;
+                var run = ease(timeElapsed, startPosition, targetPosition, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        
+        var links = document.querySelectorAll('a.scroll');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                smoothScroll(targetId, 1000);
+            });
+        });
+    </script>
+
+    <script src="contact.js"></script>
+</div>
+</body>
+</html>

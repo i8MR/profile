@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cairo:wght@200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    font-family: "Cairo", serif;
+    background-color: #c0c19e;
+    color: #6a1850;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background: #111111;
+  }
+  .particles-js-canvas-el{
+    position: fixed;
+    top: 0;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.header-card {
+    text-align: center;
+    background-color: #c0c19e;
+    color: #6a1850;
+    padding:20px 0;
+    border-bottom: 2px solid #6a1850;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
+}
+
+.header-card ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-card li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header-card a {
+    text-decoration: none;
+    color: #6a1850;
+    font-weight: bold;
+    font-family: "Roboto Condensed", serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-card a:hover {
+    background-color: #6a1850;
+    color: #111;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c0c19e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-image: url('https://cdn.discordapp.com/attachments/1120804425330610306/1325884784743944263/40285f8adb9e263b5a5d78c41de6ce4b.gif?ex=677d69ee&is=677c186e&hm=126e131af0c549a30568070fe16d319559c7f3cdb9f2d3bd7f22f48ee015fba5&');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #6a1850;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.icon-link {
+    display: inline-block;
+    width: 50px;
+    margin: 0 10px;
+    /* text-decoration: none; */
+    /* color: #6a1850; */
+    background-color: #c0c19e;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.icon-link:hover {
+    border-radius: 50%;
+    background-color: #6a1850;
+    color: #6a1850;
+}
+
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #c0c19e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    border: 1px solid #6a1850;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: "Roboto Condensed", serif;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6a1850;
+    padding-bottom: 10px;
+}
+
+/* Portfolio project styles */
+.project {
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.project h3 {
+    padding: 10px;
+    background-color: #6a1850;
+    color: #c0c19e;
+    font-size: 18px;
+    font-family: "Roboto Condensed", serif;
+    text-align: center;
+}
+
+.project p {
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Roboto Condensed", serif;
+    background-color: #222;
+    color: #6a1850;
+}
+
+/* Contact form styles */
+form {
+    margin-top: 30px;
+}
+
+label, input, textarea, button {
+    display: block;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Roboto Condensed", serif;
+    color: #6a1850;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6a1850;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Roboto Condensed", serif;
+    background-color: #c0c19e;
+    color: #ccc;
+}
+
+button {
+    background-color: #6a1850;
+    color: #c0c19e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Roboto Condensed", serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #6a1850;
+    transform: scale(1.05);
+}
+
+/* Skills section styles */
+#skills {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    margin: 1px;
+    margin-top: 10px;
+    text-align: center;
+    width: 110px;
+}
+
+.skills-list img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.skills-list p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #c0c19e;
+    padding: 30px 0;
+    text-align: center;
+    font-family: "Roboto Condensed", serif;
+    color: #6a1850;
+    font-size: 16px;
+    border-top: 2px solid #6a1850;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer Separator */
+.footer-separator {
+    margin: 20px 0;
+    border-top: 1px solid #6a1850;
+}
+
+/* Copyright Text */
+.footer-copyright {
+    font-size: 14px;
+    font-family: "Roboto Condensed", serif;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* Additional Links */
+.footer-links {
+    margin-top: 30px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #6a1850;
+    margin: 0 15px;
+    font-weight: bold;
+    font-family: "Roboto Condensed", serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #6a1850;
+    transform: scale(1.1);
+}
+
+/* Social Media Icons */
+.footer-social {
+    margin-top: 30px;
+}
+.footer-social-link {
+    width: 50px;
+    border-radius: 50%;
+}
+.footer-social a {
+    text-decoration: none;
+    color: #6a1850;
+    margin: 0 15px;
+    width: 50px;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social-link :hover {
+    color: #6a1850;
+    transform: scale(1.1);
+}
